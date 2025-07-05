@@ -87,6 +87,7 @@ const SearchAndFilter = ({ onSearchChange, onFilterChange }) => {
   return (
     <div className="search-filter-container">
       <div className="search-section">
+        <label className="search-label">Search Characters</label>
         <div className="search-input-container">
           <input
             type="text"
@@ -110,8 +111,15 @@ const SearchAndFilter = ({ onSearchChange, onFilterChange }) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
+              <circle
+                cx="11"
+                cy="11"
+                r="8"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
               <path
-                d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z"
+                d="m21 21-4.35-4.35"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
@@ -123,6 +131,7 @@ const SearchAndFilter = ({ onSearchChange, onFilterChange }) => {
       </div>
 
       <div className="filter-section">
+        <label className="filter-label">Filter by Status</label>
         <select
           value={statusFilter}
           onChange={handleStatusChange}
